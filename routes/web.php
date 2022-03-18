@@ -18,11 +18,11 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
-Route::group(['prefix' => config('joy-voyager-bread-replace-keyword.admin_prefix', 'admin')], function () {
+Route::group(['prefix' => config('joy-voyager-bread-order.admin_prefix', 'admin')], function () {
     Route::group(['as' => 'voyager.'], function () {
         // event(new Routing()); @deprecated
 
-        $namespacePrefix = '\\'.config('joy-voyager-bread-replace-keyword.controllers.namespace').'\\';
+        $namespacePrefix = '\\'.config('joy-voyager-bread-order.controllers.namespace').'\\';
 
         Route::group(['middleware' => 'admin.user'], function () use ($namespacePrefix) {
             // event(new RoutingAdmin()); @deprecated
@@ -31,7 +31,7 @@ Route::group(['prefix' => config('joy-voyager-bread-replace-keyword.admin_prefix
 
             try {
                 foreach (Voyager::model('DataType')::all() as $dataType) {
-                    // Route::get($dataType->slug . '/bread-replace-keyword', $breadController.'@breadReplaceKeyword')->name($dataType->slug.'.bread-replace-keyword');
+                    // Route::get($dataType->slug . '/bread-order', $breadController.'@breadOrder')->name($dataType->slug.'.bread-order');
                 }
             } catch (\InvalidArgumentException $e) {
                 throw new \InvalidArgumentException("Custom routes hasn't been configured because: ".$e->getMessage(), 1);
@@ -39,7 +39,7 @@ Route::group(['prefix' => config('joy-voyager-bread-replace-keyword.admin_prefix
                 // do nothing, might just be because table not yet migrated.
             }
 
-            // Route::get('bread-replace-keyword', $breadController.'@breadReplaceKeywordAll')->name('bread-replace-keyword-all');
+            // Route::get('bread-order', $breadController.'@breadOrderAll')->name('bread-order-all');
 
             // event(new RoutingAdminAfter()); @deprecated
         });

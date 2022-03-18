@@ -1,6 +1,6 @@
 <?php
 
-namespace Joy\VoyagerBreadReplaceKeyword\Database\Seeders;
+namespace Joy\VoyagerBreadOrder\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
@@ -14,7 +14,7 @@ class VoyagerDummyDatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            DummyReplaceKeywordsTableSeeder::class
+            DummyOrdersTableSeeder::class
         ]);
     }
 }
