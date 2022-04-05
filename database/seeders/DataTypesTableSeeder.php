@@ -18,7 +18,7 @@ class DataTypesTableSeeder extends Seeder
                 'name'                  => 'orders',
                 'display_name_singular' => __('joy-voyager-bread-order::seeders.data_types.order.singular'),
                 'display_name_plural'   => __('joy-voyager-bread-order::seeders.data_types.order.plural'),
-                'icon'                  => 'voyager-bread',
+                'icon'                  => 'voyager-bread voyager-bread-order voyager-basket',
                 'model_name'            => 'Joy\\VoyagerBreadOrder\\Models\\Order',
                 // 'policy_name'           => 'Joy\\VoyagerBreadOrder\\Policies\\OrderPolicy',
                 // 'controller'            => 'Joy\\VoyagerBreadOrder\\Http\\Controllers\\VoyagerBreadOrderController',
