@@ -14,7 +14,7 @@ class DummyOrdersTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = 100;
+        $count = 20;
         Order::factory()
             ->count($count)
             ->state(function (array $attributes) use ($count) {
